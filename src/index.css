@@ -17,10 +17,23 @@ p{
   font-size: 16px;
   color: #1A202C;
 }
+#container1, p{
+  font-family: 'Merriweather', serif;
+}
+form{
+  font-family: 'Lato', sans-serif;
+}
+form p{
+  font-family: 'Lato', sans-serif;
+}
+input::placeholder{
+  font-family: 'Lato', sans-serif;
+}
 h1{
   color: #1A202C;
   font-size: 26px;
   margin-bottom: 39px;
+  font-family: 'Merriweather', serif;
 }
 input{
   width: 350px;
