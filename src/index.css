@@ -3,7 +3,6 @@
 
 #containerMaster{
   display: flex;
-  display: flex;
   place-items: center;
   min-height: 100vh;
   width: 80%;
@@ -152,3 +151,52 @@ input[type='password'], input[type='email']{
   }
 }
 
+/*js*/
+.hidde{
+  display: none !important;
+}
+
+.classeInicialHide{
+  display: none !important;
+}
+.classeSucess{
+  display: block !important;
+}
+
+#sucess{
+  display: block;
+  place-items: center;
+  border: solid 1px #E8E8E8;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 30%;
+  padding: 30px;
+  border-radius: 20px;
+}
+#sucess input{
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: #04C35C;
+  color: #fff;
+  font-size: 18px;
+  width: 100%;
+  font-family: 'Lato', sans-serif;
+}
+#sucess input:hover{
+  transform: scale(1.05);
+  transition: 1s;
+  background-color: #04b657;
+}
+h2{
+  font-size: 20px;
+  font-family: 'Merriweather', serif;
+}
+
+@media(max-width: 1000px){
+  #sucess{
+    width: 80%;
+  }
+}
