@@ -200,3 +200,7 @@ h2{
     width: 80%;
   }
 }
+
+.btnError{
+  border: solid 1px rgb(252, 38, 38);
+}

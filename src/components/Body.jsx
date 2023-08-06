@@ -8,17 +8,27 @@ const Body = () => {
     const [classeHide, setClasseHide] = useState('classeInicial');
     const [classSucess, setClasseSucess] = useState('classeInicialHide');
 
+    const [classBtnEmail, setClassBtnEmail] = useState('classeInicialBtn');
+    const [classBtnPassword, setClassBtnPassword] = useState('classeInicialBtn');
+
 
     const clicou = (e) =>{
         e.preventDefault()
 
-        if(!email.includes('@') || !email.includes('.com')){
-            alert('insira um email válida')
-        }else if(!password){
-            alert('insira uma senha válida')
+        
+
+        if(!email || !email.includes('@') || !email.includes('.com')){
+            setClassBtnEmail('btnError')
+        }else if(email.includes('@') || email.includes('.com')){
+            setClassBtnEmail('classeInicialBtn')
+        }
+
+        if(!password){
+            setClassBtnPassword('btnError')
         }else{
             setClasseHide('hidde')
             setClasseSucess('classeSucess')
+            setClassBtnPassword('classeInicialBtn')
         }
     }
 
@@ -46,11 +56,11 @@ const Body = () => {
                     <form >
                         <label>
                             <p>E-mail</p>
-                            <input type="email" placeholder='exemple@gmail.com' onChange={(e)=>setEmail(e.target.value)} />
+                            <input type="email" placeholder='exemple@gmail.com' onChange={(e)=>setEmail(e.target.value)} className={classBtnEmail} />
                         </label>
                         <label>
                             <p>Senha</p>
-                            <input type="password" placeholder='Password' onChange={(e)=>setPassword(e.target.value)} />
+                            <input type="password" placeholder='Password' onChange={(e)=>setPassword(e.target.value)} className={classBtnPassword} />
                         </label>
                         <div id="esqueceu">
                             <label>
